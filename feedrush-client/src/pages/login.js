@@ -62,7 +62,7 @@ class login extends Component {
         <Grid item sm>
           <img src={AppIcon} alt="Word Bubble" className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
-            ShareIT
+            FeedRush
           </Typography>
           <form noValidate onSubmit={this.handleSubmit}>
             <TextField

@@ -9,6 +9,7 @@ admin.initializeApp({
   storageBucket: "shareit-37233.appspot.com"
 });
 */
+
 // Uncomment when ready to deploy!
 admin.initializeApp(); 
 
