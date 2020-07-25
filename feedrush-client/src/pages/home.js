@@ -4,6 +4,7 @@ import Post from "../components/post/Post";
 import Profile from "../components/profile/Profile";
 import PropTypes from "prop-types";
 import PostSkeleton from "../util/PostSkeleton";
+import LazyLoad from "react-lazyload";
 // Redux
 import { connect } from "react-redux";
 import { getPosts } from "../redux/actions/dataActions";
@@ -16,7 +17,11 @@ export class home extends Component {
   render() {
     const { loading, posts } = this.props.data;
     let recentPostsMarkup = !loading ? (
-      posts.map((post) => <Post key={post.postId} post={post} />)
+      posts.map((post) => (
+        <LazyLoad>
+          <Post key={post.postId} post={post} />
+        </LazyLoad>
+      ))
     ) : (
       <PostSkeleton />
     );
